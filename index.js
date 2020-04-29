@@ -9,7 +9,7 @@ async function main() {
     const event = core.getInput('event')
     const octokit = new github.GitHub(token)
 
-    octokit.repos.createDispatchEvent({
+    await octokit.repos.createDispatchEvent({
       owner,
       repo,
       event_type: event,
