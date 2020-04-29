@@ -6,7 +6,7 @@ A GitHub Action that dispatch a github dispatch event
 Add .github/workflows/sanity-check.yml with the following:
 
 ```
-name: Sanity check
+name: Dispatch
 on:
   pull_request:
     types: [opened]
