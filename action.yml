@@ -1,0 +1,14 @@
+name: 'dispatch'
+description: 'A GitHub Action that dispatch a github dispatch event'
+inputs:
+  token:
+    description: 'A token with access to your repository scoped in as a secret'
+    required: true
+outputs:
+  token:
+    description: A token with access to your repository scoped in as a secret
+  event:
+    description: the event type
+runs:
+  using: 'node12'
+  main: 'index.js'
