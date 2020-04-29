@@ -9,11 +9,16 @@ async function main() {
     const event = core.getInput('event')
     const octokit = new github.GitHub(token)
 
-    await octokit.repos.createDispatchEvent({
+    console.log("before")
+    const result = await octokit.repos.createDispatchEvent({
       owner,
       repo,
       event_type: event,
     });
+
+    console.log("=====================")
+    console.log(owner, repo, event)
+    console.log("result:", result)
 
   } catch (error) {
     core.setFailed(error.message)
